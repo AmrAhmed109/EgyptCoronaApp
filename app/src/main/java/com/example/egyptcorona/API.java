@@ -19,7 +19,7 @@ public class API {
      * casesPerOneMillion : 1221
      * deathsPerOneMillion : 39
      * tests : 2107442
-     * testsPerOneMillion : 6367
+     * testsPerOneMillion : 636
      */
 
     private String country;
