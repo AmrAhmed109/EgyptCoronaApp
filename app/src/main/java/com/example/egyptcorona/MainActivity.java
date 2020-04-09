@@ -31,13 +31,16 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.setMessage("wait..");
         progressDialog.show();
+
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
         Call<API> apiCall = apiInterface.getapi();
         apiCall.enqueue(new Callback<API>() {
             @Override
             public void onResponse(Call<API> call, Response<API> response) {
                 progressDialog.dismiss();
-                textView.setText(response.body().getCountry());
+
+                String content = String.valueOf(response.body().getTodayCases());
+                textView.setText(content);
             }
 
             @Override

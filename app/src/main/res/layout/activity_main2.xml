@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+
+<View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="@drawable/corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+    />
+
+    <TextView
+        android:id="@+id/Coronavirus_Global"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        android:text="Coronavirus Global"
+        android:textSize="16dp"
+        android:paddingTop="24dp"
+        android:paddingStart="25dp"
+        />
+
+    <LinearLayout
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:id="@+id/Total_Cases"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Total Cases"
+            android:textSize="13dp"
+
+            />
+        <TextView
+            android:id="@+id/TotalCases_num"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="16dp"
+            android:layout_marginTop="9dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="new + "
+                android:textSize="10dp"
+                />
+            <TextView
+                android:id="@+id/TotalCases_newNum"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000"
+                android:textSize="10dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:id="@+id/middl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/first"
+        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global"
+        app:layout_constraintRight_toLeftOf="@id/end"
+        android:orientation="vertical"
+        android:weightSum="60">
+        <TextView
+            android:id="@+id/Deaths"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Deaths"
+            android:textSize="13dp"
+
+            />
+        <TextView
+            android:id="@+id/Deaths_num"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="16dp"
+            android:layout_marginTop="9dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="new + "
+                android:textSize="10dp"
+                />
+            <TextView
+                android:id="@+id/Deaths_new"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000"
+                android:textSize="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/middl"
+        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global"
+        app:layout_constraintRight_toRightOf="@id/view"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:id="@+id/Recovered"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Recovered"
+            android:textSize="13dp"
+
+            />
+        <TextView
+            android:id="@+id/Recovered_num"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="16dp"
+            android:layout_marginTop="9dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="new + "
+                android:textSize="10dp"
+                />
+            <TextView
+                android:id="@+id/Recovered_Newnum"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000"
+                android:textSize="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="@id/view"
+    app:layout_constraintTop_toBottomOf="@id/first"
+    app:layout_constraintLeft_toLeftOf="@id/first"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="#707070"
+        android:lineSpacingExtra="4sp"
+        tools:text="Last updated:  "
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="#707070"
+        android:lineSpacingExtra="4sp"
+        tools:text="Apr 05, 03:54 PM  "
+        />
+</LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="@drawable/corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        />
+
+    <TextView
+        android:id="@+id/Coronavirus_Global2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@id/view2"
+        android:text=" Egypt"
+        android:textSize="16dp"
+        android:paddingTop="24dp"
+        android:paddingStart="25dp"
+        />
+
+    <LinearLayout
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/first2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/view2"
+        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:id="@+id/Total_Cases2"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Total Cases"
+            android:textSize="13dp"
+
+            />
+        <TextView
+            android:id="@+id/TotalCases_num2"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="16dp"
+            android:layout_marginTop="9dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="new + "
+                android:textSize="10dp"
+                />
+            <TextView
+                android:id="@+id/TotalCases_newNum2"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000"
+                android:textSize="10dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:id="@+id/middl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/first"
+        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2"
+        app:layout_constraintRight_toLeftOf="@id/end"
+        android:orientation="vertical"
+        android:weightSum="60">
+        <TextView
+            android:id="@+id/Deaths2"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Deaths"
+            android:textSize="13dp"
+
+            />
+        <TextView
+            android:id="@+id/Deaths_num2"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="16dp"
+            android:layout_marginTop="9dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="new + "
+                android:textSize="10dp"
+                />
+            <TextView
+                android:id="@+id/Deaths_new2"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000"
+                android:textSize="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:id="@+id/end2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/middl"
+        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2"
+        app:layout_constraintRight_toRightOf="@id/view2"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:id="@+id/Recovered2"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Total Cases"
+            android:textSize="13dp"
+
+            />
+        <TextView
+            android:id="@+id/Recovered_num2"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="16dp"
+            android:layout_marginTop="9dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="new + "
+                android:textSize="10dp"
+                />
+            <TextView
+                android:id="@+id/Recovered_Newnum2"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000"
+                android:textSize="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintTop_toBottomOf="@id/first2"
+        app:layout_constraintLeft_toLeftOf="@id/first2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#707070"
+            android:lineSpacingExtra="4sp"
+            tools:text="Last updated:  "
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#707070"
+            android:lineSpacingExtra="4sp"
+            tools:text="Apr 05, 03:54 PM  "
+            />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
