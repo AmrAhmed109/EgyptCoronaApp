@@ -23,7 +23,7 @@
 <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="190dp"
         android:background="@drawable/corner"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="30"
             android:text="Total Cases"
-            android:textSize="13dp"
+            android:textSize="16dp"
 
             />
         <TextView
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1,254,464"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:layout_marginTop="9dp"
             />
         <LinearLayout
@@ -96,8 +96,8 @@
                 android:layout_weight="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="new "
-                android:textSize="10dp"
+                android:text="new: "
+                android:textSize="13dp"
                 />
             <TextView
                 android:textColor="@color/baby_blue"
@@ -106,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20000"
-                android:textSize="10dp"
+                android:textSize="13dp"
                 />
         </LinearLayout>
 
@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="30"
             android:text="Deaths"
-            android:textSize="13dp"
+            android:textSize="16dp"
 
             />
         <TextView
@@ -140,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1,254,464"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:layout_marginTop="9dp"
             />
         <LinearLayout
@@ -151,8 +151,8 @@
                 android:layout_weight="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="new "
-                android:textSize="10dp"
+                android:text="new: "
+                android:textSize="13dp"
                 />
             <TextView
                 android:textColor="@color/red"
@@ -161,7 +161,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20000"
-                android:textSize="10dp"
+                android:textSize="13dp"
                 />
         </LinearLayout>
     </LinearLayout>
@@ -184,7 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="30"
             android:text="Recovered"
-            android:textSize="13dp"
+            android:textSize="16dp"
 
             />
         <TextView
@@ -195,7 +195,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1,254,464"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:layout_marginTop="9dp"
             />
 
@@ -216,22 +216,23 @@
         android:textSize="10sp"
         android:textColor="#707070"
         android:lineSpacingExtra="4sp"
-        tools:text="Last updated:  "
+        android:text="Last updated:  "
         />
     <TextView
+        android:id="@+id/global_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="10sp"
         android:textColor="#707070"
         android:lineSpacingExtra="4sp"
-        tools:text="Apr 05, 03:54 PM  "
+        android:text="Apr 05, 03:54 PM  "
         />
 </LinearLayout>
 
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="190dp"
         android:background="@drawable/corner"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -282,7 +283,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="30"
             android:text="Total Cases"
-            android:textSize="13dp"
+            android:textSize="16dp"
 
             />
         <TextView
@@ -293,7 +294,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1,254,464"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:layout_marginTop="9dp"
             />
         <LinearLayout
@@ -304,8 +305,8 @@
                 android:layout_weight="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="new + "
-                android:textSize="10dp"
+                android:text="new: "
+                android:textSize="13dp"
                 />
             <TextView
                 android:textColor="@color/baby_blue"
@@ -314,7 +315,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20000"
-                android:textSize="10dp"
+                android:textSize="13dp"
                 />
         </LinearLayout>
 
@@ -337,7 +338,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="30"
             android:text="Deaths"
-            android:textSize="13dp"
+            android:textSize="16dp"
 
             />
         <TextView
@@ -348,7 +349,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1,254,464"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:layout_marginTop="9dp"
             />
         <LinearLayout
@@ -359,8 +360,8 @@
                 android:layout_weight="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="new + "
-                android:textSize="10dp"
+                android:text="new: "
+                android:textSize="13dp"
                 />
             <TextView
                 android:textColor="@color/red"
@@ -369,7 +370,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20000"
-                android:textSize="10dp"
+                android:textSize="13dp"
                 />
         </LinearLayout>
     </LinearLayout>
@@ -392,7 +393,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="30"
             android:text="Recovered"
-            android:textSize="13dp"
+            android:textSize="16dp"
 
             />
         <TextView
@@ -403,7 +404,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1,254,464"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:layout_marginTop="9dp"
             />
 
@@ -424,15 +425,16 @@
             android:textSize="10sp"
             android:textColor="#707070"
             android:lineSpacingExtra="4sp"
-            tools:text="Last updated:  "
+            android:text="Last updated:  "
             />
         <TextView
+            android:id="@+id/egypt_update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="10sp"
             android:textColor="#707070"
             android:lineSpacingExtra="4sp"
-            tools:text="Apr 05, 03:54 PM  "
+            android:text="Apr 05, 03:54 PM  "
             />
     </LinearLayout>
 
@@ -451,16 +453,19 @@
         android:gravity="center_vertical"
         android:textAllCaps="false"
         android:paddingLeft="16dp"
-        android:text="See the all infected countries"/>
+        android:text="See the all infected countries"
+        android:onClick="seeCounry"/>
 
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
         android:src="@drawable/angle_down"
         app:layout_constraintRight_toRightOf="@id/bottom"
         app:layout_constraintTop_toTopOf="@id/bottom"
         app:layout_constraintBottom_toBottomOf="@id/bottom"
         android:layout_marginRight="16dp"
         />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

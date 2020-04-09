@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView textView =findViewById(R.id.tv_hello);
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://corona.lmao.ninja/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -33,20 +33,20 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.show();
 
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
-        Call<API> apiCall = apiInterface.getapiEgypt();
-        apiCall.enqueue(new Callback<API>() {
+        Call<Api3> apiCall = apiInterface.getapiAllGlobal();
+        apiCall.enqueue(new Callback<Api3>() {
             @Override
-            public void onResponse(Call<API> call, Response<API> response) {
+            public void onResponse(Call<Api3> call, Response<Api3> response) {
                 progressDialog.dismiss();
+                String s = String.valueOf(response.body().getActive());
 
-                String content = String.valueOf(response.body().getTodayCases());
-                textView.setText(content);
+
             }
 
             @Override
-            public void onFailure(Call<API> call, Throwable t) {
+            public void onFailure(Call<Api3> call, Throwable t) {
                 progressDialog.dismiss();
-                textView.setText(t.getMessage());
+
                 Log.v("haoooooooo",t.getMessage());
             }
         });
