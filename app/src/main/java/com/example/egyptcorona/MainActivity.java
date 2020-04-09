@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.show();
 
         ApiInterface apiInterface = retrofit.create(ApiInterface.class);
-        Call<API> apiCall = apiInterface.getapi();
+        Call<API> apiCall = apiInterface.getapiEgypt();
         apiCall.enqueue(new Callback<API>() {
             @Override
             public void onResponse(Call<API> call, Response<API> response) {

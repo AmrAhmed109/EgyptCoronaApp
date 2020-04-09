@@ -8,10 +8,10 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
     @GET("countries/Egypt")
-    public Call<API> getapi();
+    public Call<API> getapiEgypt();
 
-    @GET("posts/1")
-    public Call<Apitest> getapi2();
+    @GET("all")
+    public Call<API> getapiAll();
 
 }
 

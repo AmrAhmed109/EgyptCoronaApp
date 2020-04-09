@@ -8,6 +8,5 @@
     <stroke
         android:width="2dp"
         android:color="@color/baby_blue"
-
         />
 </shape>
