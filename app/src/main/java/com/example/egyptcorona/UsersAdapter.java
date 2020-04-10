@@ -13,11 +13,12 @@ import java.util.List;
 
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHolder> {
     Context context;
-    List<API> userListResponses;
+    List<Api2> userListResponses;
 
-    public UsersAdapter(Context context, List<API> userListResponses) {
+
+    public UsersAdapter(Context context, List<Api2> userListResponses) {
         this.context = context;
-        this.userListResponses = userListResponses ;
+        this.userListResponses = userListResponses;
     }
 
     @Override
@@ -29,14 +30,14 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
 
     @Override
     public void onBindViewHolder(UsersViewHolder holder, final int position) {
-        String r = String.valueOf(userListResponses.get(position).getCountry());
-        holder.country_name.setText(r);
-        String totalcase = String.valueOf(userListResponses.get(position).getCases());
-        String totalcase_new = String.valueOf(userListResponses.get(position).getTodayCases());
-        String death = String.valueOf(userListResponses.get(position).getDeaths());
-        String death_new = String.valueOf(userListResponses.get(position).getTodayDeaths());
-        String recovery = String.valueOf(userListResponses.get(position).getRecovered());
-        String active = String.valueOf(userListResponses.get(position).getActive());
+
+        holder.country_name.setText(userListResponses.get(position).getCountry());
+        String totalcase = String.valueOf(userListResponses.get(position).getTotalCases());
+        String totalcase_new = String.valueOf(userListResponses.get(position).getNewCases());
+        String death = String.valueOf(userListResponses.get(position).getTotalDeaths());
+        String death_new = String.valueOf(userListResponses.get(position).getNewDeaths());
+        String recovery = String.valueOf(userListResponses.get(position).getTotalRecovered());
+
 
 
         holder.totalcase.setText(totalcase);
@@ -44,13 +45,14 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
         holder.death.setText(death);
         holder.death_new.setText("+"+death_new);
         holder.recovery.setText(recovery);
-        holder.active.setText(active);
-       holder.itemView.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Toast.makeText(context, userListResponses.get(position).getCountry(), Toast.LENGTH_SHORT).show();
-           }
-       });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, userListResponses.get(position).getCountry(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -61,7 +63,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
     public class UsersViewHolder extends RecyclerView.ViewHolder {
         TextView  country_name ,totalcase, totalcase_new,
                 death,death_new,
-                recovery,active;
+                recovery;
         public UsersViewHolder(View itemView) {
             super(itemView);
             country_name = itemView.findViewById(R.id.country_name);
@@ -70,8 +72,6 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
             death = itemView.findViewById(R.id.Death_Caseslist);
             death_new = itemView.findViewById(R.id.new_Deathlist);
             recovery = itemView.findViewById(R.id.total_recoverdlist);
-            active = itemView.findViewById(R.id.Active_caseslist);
-
         }
     }
 }

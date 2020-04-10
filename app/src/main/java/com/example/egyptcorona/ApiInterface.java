@@ -10,8 +10,8 @@ public interface ApiInterface {
     @GET("countries/Egypt")
     public Call<API> getapiEgypt();
 
-    @GET("countries")
-    public Call<List<API>> getapiAll();
+    @GET("api/v1/data/world")
+    public Call<List<Api2>> getapiAll();
 
     @GET("all")
     public Call<Api3> getapiAllGlobal();

@@ -5,7 +5,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiServer2 {
-    private static String url = "https://corona-virus-stats.herokuapp.com/";
+    private static String url = "https://nepalcorona.info/";
     private static OkHttpClient okHttpClient = new OkHttpClient();
 
     private static Retrofit.Builder builder = new Retrofit.Builder()
