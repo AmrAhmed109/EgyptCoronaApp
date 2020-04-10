@@ -17,7 +17,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
 
     public UsersAdapter(Context context, List<API> userListResponses) {
         this.context = context;
-        this.userListResponses = userListResponses;
+        this.userListResponses = userListResponses ;
     }
 
     @Override
