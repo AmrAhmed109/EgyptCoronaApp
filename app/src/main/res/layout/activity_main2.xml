@@ -449,7 +449,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:textColor="@color/blue_black"
+        android:textColor="@color/grey"
         android:gravity="center_vertical"
         android:textAllCaps="false"
         android:paddingLeft="16dp"
