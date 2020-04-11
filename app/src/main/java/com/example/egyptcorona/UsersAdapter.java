@@ -15,7 +15,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
     Context context;
     List<Api2> userListResponses;
 
-
+    int count=0;
     public UsersAdapter(Context context, List<Api2> userListResponses) {
         this.context = context;
         this.userListResponses = userListResponses;
@@ -30,6 +30,12 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
 
     @Override
     public void onBindViewHolder(UsersViewHolder holder, final int position) {
+
+        if (userListResponses.get(position).getCountry().equals("")){
+            userListResponses.remove(position);
+            count++;
+        }
+
 
         holder.country_name.setText(userListResponses.get(position).getCountry());
         String totalcase = String.valueOf(userListResponses.get(position).getTotalCases());
@@ -49,7 +55,9 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, userListResponses.get(position).getCountry(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, userListResponses.get(position).toString(), Toast.LENGTH_SHORT).show();
+
+
             }
         });
 

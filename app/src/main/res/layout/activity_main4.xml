@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15202B"
+    tools:context=".Main4Activity">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:src="@drawable/logooo"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:layout_marginStart="9dp"
+        android:id="@+id/egyptflage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/flagg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Coronavirus_Global2"
+        app:layout_constraintBottom_toBottomOf="@+id/Coronavirus_Global2"
+       />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/Coronavirus_Global2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/egyptflage"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:text=" Egypt"
+        android:textSize="16dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/refresh"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/refresh3"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="19dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="refresh"
+
+        />
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:id="@+id/tc"
+        android:layout_marginStart="16dp"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:background="@drawable/corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2"/>
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tc"
+        app:layout_constraintRight_toRightOf="@id/tc"
+        app:layout_constraintLeft_toLeftOf="@id/tc"
+        app:layout_constraintTop_toTopOf="@id/tc"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:textColor="@color/grey"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Total Cases"
+            android:textSize="16dp"
+
+            />
+        <TextView
+            android:textColor="@color/baby_blue"
+            android:textStyle="bold"
+            android:id="@+id/mTotalCases"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="20dp"
+            android:layout_marginTop="9dp"
+            />
+
+
+    </LinearLayout>
+ //------------------------------------------
+    <TextView
+        android:layout_marginTop="40dp"
+        android:id="@+id/nc"
+        android:layout_marginEnd="16dp"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:background="@drawable/corner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2"/>
+
+    <LinearLayout
+        android:id="@+id/first2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/nc"
+        app:layout_constraintRight_toRightOf="@id/nc"
+        app:layout_constraintLeft_toLeftOf="@id/nc"
+        app:layout_constraintTop_toTopOf="@id/nc"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:textColor="@color/grey"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Today Cases"
+            android:textSize="16dp"
+
+            />
+        <TextView
+            android:textColor="@color/baby_blue"
+            android:textStyle="bold"
+            android:id="@+id/mToday_Cases"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="20dp"
+            android:layout_marginTop="9dp"
+            />
+    </LinearLayout>
+    //------------------------------------------
+
+    <TextView
+        android:id="@+id/td"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:background="@drawable/corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tc"/>
+    <LinearLayout
+        android:id="@+id/first1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/td"
+        app:layout_constraintRight_toRightOf="@id/td"
+        app:layout_constraintLeft_toLeftOf="@id/td"
+        app:layout_constraintTop_toTopOf="@id/td"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:textColor="@color/grey"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Total Death"
+            android:textSize="16dp"
+
+            />
+        <TextView
+            android:textColor="@color/baby_blue"
+            android:textStyle="bold"
+            android:id="@+id/mTotalDeath"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="20dp"
+            android:layout_marginTop="9dp"
+            />
+
+
+    </LinearLayout>
+    //-------------------------------------
+    <TextView
+        android:id="@+id/nt"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:background="@drawable/corner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nc"/>
+
+    <LinearLayout
+        android:id="@+id/first22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/nt"
+        app:layout_constraintRight_toRightOf="@id/nt"
+        app:layout_constraintLeft_toLeftOf="@id/nt"
+        app:layout_constraintTop_toTopOf="@id/nt"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:textColor="@color/grey"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Today Cases"
+            android:textSize="16dp"
+
+            />
+        <TextView
+            android:textColor="@color/baby_blue"
+            android:textStyle="bold"
+            android:id="@+id/mToday_Death"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="20dp"
+            android:layout_marginTop="9dp"
+            />
+    </LinearLayout>
+    //-------------------------------
+
+    <TextView
+        android:id="@+id/tr"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:background="@drawable/corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/td"/>
+    <LinearLayout
+        android:id="@+id/first11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tr"
+        app:layout_constraintRight_toRightOf="@id/tr"
+        app:layout_constraintLeft_toLeftOf="@id/tr"
+        app:layout_constraintTop_toTopOf="@id/tr"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:textColor="@color/grey"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Total Recoverd"
+            android:textSize="16dp"
+
+            />
+        <TextView
+            android:textColor="@color/baby_blue"
+            android:textStyle="bold"
+            android:id="@+id/mTotal_recoverd"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="20dp"
+            android:layout_marginTop="9dp"
+            />
+
+//-------------------------------------------------------
+    </LinearLayout>
+    <TextView
+        android:id="@+id/ac"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:background="@drawable/corner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nt"/>
+
+    <LinearLayout
+        android:id="@+id/first222"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/ac"
+        app:layout_constraintRight_toRightOf="@id/ac"
+        app:layout_constraintLeft_toLeftOf="@id/ac"
+        app:layout_constraintTop_toTopOf="@id/ac"
+        android:orientation="vertical"
+        android:weightSum="60">
+
+        <TextView
+            android:textColor="@color/grey"
+            android:textAlignment="textStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="Active Cases"
+            android:textSize="16dp"
+
+            />
+        <TextView
+            android:textColor="@color/baby_blue"
+            android:textStyle="bold"
+            android:id="@+id/mActrive_cases"
+            android:layout_weight="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,254,464"
+            android:textSize="20dp"
+            android:layout_marginTop="9dp"
+            />
+    </LinearLayout>
+    //-------------------------------
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,17 +4,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#15202B"
     tools:context=".Main3Activity">
 
-
-
-    <TextView
-        android:id="@+id/hello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/top"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logooo"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+
+        />
+
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top" />
+
+    <TextView
+        android:id="@+id/line2"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/corner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top" />
+
+    <TextView
+        android:id="@+id/Symptoms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Symptoms"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/line1"
+        app:layout_constraintRight_toLeftOf="@id/line2"
+        app:layout_constraintTop_toBottomOf="@id/top" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/group1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Symptoms" />
+
+    <TextView
+        android:id="@+id/line11"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image1" />
+
+    <TextView
+        android:id="@+id/line22"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/corner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image1" />
+
+    <TextView
+        android:id="@+id/CONTAGION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contagion"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/line1"
+        app:layout_constraintRight_toLeftOf="@id/line2"
+        app:layout_constraintTop_toBottomOf="@id/image1" />
+
+    <ImageView
+        android:id="@+id/image12"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/group4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CONTAGION" />
+
+    <TextView
+        android:id="@+id/line13"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image12" />
+
+    <TextView
+        android:id="@+id/line23"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/corner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image12" />
+
+    <TextView
+        android:id="@+id/Prevention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Prevention"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/line13"
+        app:layout_constraintRight_toLeftOf="@id/line23"
+        app:layout_constraintTop_toBottomOf="@id/image12" />
+
+    <ImageView
+        android:id="@+id/image13"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/group3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Prevention" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

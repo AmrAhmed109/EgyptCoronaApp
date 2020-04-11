@@ -13,7 +13,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -31,11 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycle_view);
         getUserListData();
+        setupdate();
+
     }
     private void getUserListData(){
         final ProgressDialog progressDialog =new ProgressDialog(MainActivity.this);
         progressDialog.setCancelable(false);
-        progressDialog.setMessage("Please Wait");
+        progressDialog.setMessage("Getting update..");
         progressDialog.show();
 
         //Retrofit retrofit = ApiServer.getRetrofitClient();
@@ -51,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
            @Override
            public void onFailure(Call<List<Api2>> call, Throwable t) {
+               progressDialog.dismiss();
+               Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
 
            }
        });
@@ -61,8 +69,9 @@ public class MainActivity extends AppCompatActivity {
     public void setDataInRecyclerView(){
         LinearLayoutManager linearLayoutManager =new LinearLayoutManager(MainActivity.this);
         recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setHasFixedSize(true);
        UsersAdapter usersAdapter = new UsersAdapter(MainActivity.this,userListResponses);
-       recyclerView.setAdapter(usersAdapter);
+        recyclerView.setAdapter(usersAdapter);
 
 
        // LinearLayoutManager manager = new LinearLayoutManager(MainActivity.this, RecyclerView.VERTICAL,false);
@@ -73,5 +82,32 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+public void setupdate(){
+TextView textView = findViewById(R.id.updatedanother);
+    ApiServer.createService(ApiInterface.class).getapiAllGlobal().enqueue(new Callback<Api3>() {
+        @Override
+        public void onResponse(Call<Api3> call, Response<Api3> response) {
 
+
+            Date date = new Date(response.body().getUpdated());
+            DateFormat formatter = new SimpleDateFormat("dd MMMM hh:mm aa");
+            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+            String dateFormatted = formatter.format(date);
+            textView.setText(dateFormatted);
+
+        }
+
+        @Override
+        public void onFailure(Call<Api3> call, Throwable t) {
+
+        }
+    });
+}
+
+    public void refresh(View view) {
+        getUserListData();
+        setupdate();
+       // Intent intent =new Intent(this,MainActivity.class);
+       // startActivity(intent);
+    }
 }

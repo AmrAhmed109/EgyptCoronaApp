@@ -16,5 +16,11 @@ public interface ApiInterface {
     @GET("all")
     public Call<Api3> getapiAllGlobal();
 
+    @GET("all")
+    public Call<Api3> getapiAllGlobal2();
+
+    @GET("all")
+    public Call<List<API>> getapionce();
+
 }
 

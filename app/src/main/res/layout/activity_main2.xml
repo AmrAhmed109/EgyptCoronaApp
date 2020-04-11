@@ -7,19 +7,59 @@
     android:layout_height="match_parent"
     tools:context=".Main2Activity"
     android:orientation="vertical"
-    android:background="#FAFAFA">
+    android:background="#15202B">
+
+    <TextView
+        android:text="Raise your awareness on CORONA VIRUS"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/another_corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="test"
+        />
+    <ImageView
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:src="@drawable/angle"
+        app:layout_constraintRight_toRightOf="@id/info"
+        app:layout_constraintTop_toTopOf="@id/info"
+        app:layout_constraintBottom_toBottomOf="@id/info"
+        android:layout_marginRight="16dp"
+        />
 
 <ImageView
     android:id="@+id/logo"
     android:layout_width="140dp"
     android:layout_height="60dp"
-    android:src="@drawable/logo"
+    android:src="@drawable/logooo"
     android:layout_marginTop="10dp"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintTop_toTopOf="parent"
 
     />
+    <ImageView
+        android:id="@+id/refresh"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/refresh3"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="19dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="refresh"
+
+        />
 <View
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -27,14 +67,14 @@
         android:background="@drawable/corner"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintTop_toBottomOf="@id/info"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
     />
 
     <TextView
-        android:textColor="@color/blue_black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:id="@+id/Coronavirus_Global"
         android:layout_width="wrap_content"
@@ -93,6 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp">
             <TextView
+                android:textColor="@color/grey"
                 android:layout_weight="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -148,6 +189,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp">
             <TextView
+                android:textColor="@color/grey"
                 android:layout_weight="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -213,8 +255,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
-        android:textColor="#707070"
+        android:textSize="13sp"
+        android:textColor="@color/grey"
         android:lineSpacingExtra="4sp"
         android:text="Last updated:  "
         />
@@ -222,8 +264,8 @@
         android:id="@+id/global_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
-        android:textColor="#707070"
+        android:textSize="13sp"
+        android:textColor="@color/grey"
         android:lineSpacingExtra="4sp"
         android:text="Apr 05, 03:54 PM  "
         />
@@ -251,7 +293,7 @@
         android:paddingTop="10dp"
         android:paddingStart="20dp"/>
     <TextView
-        android:textColor="@color/blue_black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:id="@+id/Coronavirus_Global2"
         android:layout_width="wrap_content"
@@ -302,6 +344,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp">
             <TextView
+                android:textColor="@color/grey"
                 android:layout_weight="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -357,6 +400,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp">
             <TextView
+                android:textColor="@color/grey"
                 android:layout_weight="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -422,17 +466,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="10sp"
-            android:textColor="#707070"
+            android:textSize="13sp"
+            android:textColor="@color/grey"
             android:lineSpacingExtra="4sp"
             android:text="Last updated:  "
             />
         <TextView
+            android:textSize="13dp"
             android:id="@+id/egypt_update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="10sp"
-            android:textColor="#707070"
+            android:textColor="@color/grey"
             android:lineSpacingExtra="4sp"
             android:text="Apr 05, 03:54 PM  "
             />
@@ -453,7 +497,7 @@
         android:gravity="center_vertical"
         android:textAllCaps="false"
         android:paddingLeft="16dp"
-        android:text="See the all infected countries"
+        android:text="See all infected countries"
         android:onClick="seeCounry"/>
 
 
@@ -466,6 +510,5 @@
         app:layout_constraintBottom_toBottomOf="@id/bottom"
         android:layout_marginRight="16dp"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
