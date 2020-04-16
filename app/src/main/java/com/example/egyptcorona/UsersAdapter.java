@@ -9,13 +9,17 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
-public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHolder> {
+public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHolder>  {
     Context context;
     List<Api2> userListResponses;
+    DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
-    int count=0;
+
+
     public UsersAdapter(Context context, List<Api2> userListResponses) {
         this.context = context;
         this.userListResponses = userListResponses;
@@ -33,39 +37,38 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
 
         if (userListResponses.get(position).getCountry().equals("")){
             userListResponses.remove(position);
-            count++;
+            userListResponses.add(227,userListResponses.get(0));
         }
 
-
+        decimalFormat.setGroupingUsed(true);
+        decimalFormat.setGroupingSize(3);
         holder.country_name.setText(userListResponses.get(position).getCountry());
-        String totalcase = String.valueOf(userListResponses.get(position).getTotalCases());
-        String totalcase_new = String.valueOf(userListResponses.get(position).getNewCases());
-        String death = String.valueOf(userListResponses.get(position).getTotalDeaths());
-        String death_new = String.valueOf(userListResponses.get(position).getNewDeaths());
-        String recovery = String.valueOf(userListResponses.get(position).getTotalRecovered());
-
-
-
-        holder.totalcase.setText(totalcase);
-        holder.totalcase_new.setText("+"+totalcase_new);
-        holder.death.setText(death);
-        holder.death_new.setText("+"+death_new);
-        holder.recovery.setText(recovery);
+        holder.totalcase.setText(decimalFormat.format(userListResponses.get(position).getTotalCases()));
+        holder.totalcase_new.setText("+"+decimalFormat.format(userListResponses.get(position).getNewCases()));
+        holder.death.setText(decimalFormat.format(userListResponses.get(position).getTotalDeaths()));
+        holder.death_new.setText("+"+decimalFormat.format(userListResponses.get(position).getNewDeaths()));
+        holder.recovery.setText(decimalFormat.format(userListResponses.get(position).getTotalRecovered()));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, userListResponses.get(position).toString(), Toast.LENGTH_SHORT).show();
-
-
+                Toast.makeText(context,"Active cases in " +userListResponses.get(position).getCountry()+" is "+
+                        decimalFormat.format(userListResponses.get(position).getActiveCases()), Toast.LENGTH_SHORT).show();
             }
+
         });
 
     }
 
     @Override
     public int getItemCount() {
-        return userListResponses.size() ;
+        return userListResponses.size();
+    }
+
+    public void fiterlist (ArrayList<Api2> filteredlist){
+        userListResponses = filteredlist;
+        notifyDataSetChanged();
+
     }
 
     public class UsersViewHolder extends RecyclerView.ViewHolder {
@@ -82,4 +85,5 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
             recovery = itemView.findViewById(R.id.total_recoverdlist);
         }
     }
+
 }

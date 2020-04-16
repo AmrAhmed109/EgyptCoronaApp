@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,507 +8,575 @@
     tools:context=".Main2Activity"
     android:orientation="vertical"
     android:background="#15202B">
-
-    <TextView
-        android:text="Raise your awareness on CORONA VIRUS"
-        android:gravity="center_vertical"
-        android:paddingLeft="16dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:id="@+id/info"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/another_corner"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:onClick="test"
-        />
-    <ImageView
-        android:layout_width="17dp"
-        android:layout_height="17dp"
-        android:src="@drawable/angle"
-        app:layout_constraintRight_toRightOf="@id/info"
-        app:layout_constraintTop_toTopOf="@id/info"
-        app:layout_constraintBottom_toBottomOf="@id/info"
-        android:layout_marginRight="16dp"
-        />
-
-<ImageView
-    android:id="@+id/logo"
-    android:layout_width="140dp"
-    android:layout_height="60dp"
-    android:src="@drawable/logooo"
-    android:layout_marginTop="10dp"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-
-    />
-    <ImageView
-        android:id="@+id/refresh"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:src="@drawable/refresh3"
-        android:layout_marginTop="24dp"
-        android:layout_marginRight="19dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="refresh"
-
-        />
-<View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:background="@drawable/corner"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/info"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-    />
-
-    <TextView
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:id="@+id/Coronavirus_Global"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/Earth"
-        app:layout_constraintTop_toTopOf="@id/view"
-        android:text="Coronavirus Global"
-        android:textSize="16dp"
-        android:paddingTop="24dp"
+        >
 
-        />
-    <ImageView
-        android:id="@+id/Earth"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/global"
-        app:layout_constraintLeft_toLeftOf="@id/view"
-        app:layout_constraintTop_toTopOf="@id/view"
-        android:paddingTop="10dp"
-        android:paddingStart="20dp"/>
-    <LinearLayout
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:id="@+id/first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="@id/view"
-        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global"
-        android:orientation="vertical"
-        android:weightSum="60">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:textColor="@color/grey"
-            android:id="@+id/Total_Cases"
-            android:textAlignment="textStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:text="Total Cases"
-            android:textSize="16dp"
 
-            />
-        <TextView
-            android:textColor="@color/baby_blue"
-            android:textStyle="bold"
-            android:id="@+id/TotalCases_num"
-            android:layout_weight="30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1,254,464"
-            android:textSize="20dp"
-            android:layout_marginTop="9dp"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp">
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/loglog"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <ImageView
+                android:id="@+id/refresh"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="19dp"
+                android:onClick="refresh"
+                android:src="@drawable/refresh9"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
             <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/another_corner"
+                android:gravity="center_vertical"
+                android:onClick="test"
+                android:paddingLeft="16dp"
+                android:text="Raise your awareness on CORONA VIRUS"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logo" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/angle"
+                app:layout_constraintBottom_toBottomOf="@id/info"
+                app:layout_constraintRight_toRightOf="@id/info"
+                app:layout_constraintTop_toTopOf="@id/info" />
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/corner"
+                android:onClick="more_global_info"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/info" />
+
+            <TextView
+                android:id="@+id/Coronavirus_Global"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="24dp"
+                android:text="Coronavirus Global"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/Earth"
+                app:layout_constraintTop_toTopOf="@id/view"
+
+                />
+
+            <ImageView
+                android:id="@+id/Earth"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/global"
+                app:layout_constraintLeft_toLeftOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/view" />
+
+            <ImageView
+                android:id="@+id/go1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/angle2"
+                app:layout_constraintRight_toRightOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:paddingTop="24dp"
+                android:text="more info"
                 android:textColor="@color/grey"
-                android:layout_weight="0"
+                app:layout_constraintBottom_toBottomOf="@id/go1"
+                app:layout_constraintRight_toRightOf="@id/go1"
+                app:layout_constraintTop_toTopOf="@id/view" />
+
+            <LinearLayout
+                android:id="@+id/first"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="new: "
-                android:textSize="13dp"
-                />
-            <TextView
-                android:textColor="@color/baby_blue"
-                android:id="@+id/TotalCases_newNum"
-                android:layout_weight="0"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:weightSum="60"
+                app:layout_constraintLeft_toLeftOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global">
+
+                <TextView
+                    android:id="@+id/Total_Cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="Total Cases"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/TotalCases_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="30"
+                    android:text="0"
+                    android:textColor="@color/baby_blue"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="new: "
+                        android:textColor="@color/grey"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/TotalCases_newNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="0"
+                        android:textColor="@color/baby_blue"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/middl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="20000"
-                android:textSize="13dp"
-                />
-        </LinearLayout>
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:weightSum="60"
+                app:layout_constraintLeft_toRightOf="@id/first"
+                app:layout_constraintRight_toLeftOf="@id/end"
+                app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global">
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="24dp"
-        android:id="@+id/middl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/first"
-        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global"
-        app:layout_constraintRight_toLeftOf="@id/end"
-        android:orientation="vertical"
-        android:weightSum="60">
-        <TextView
-            android:textColor="@color/grey"
-            android:id="@+id/Deaths"
-            android:textAlignment="textStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:text="Deaths"
-            android:textSize="16dp"
+                <TextView
+                    android:id="@+id/Deaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="Deaths"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp"
 
-            />
-        <TextView
-            android:textColor="@color/red"
-            android:textStyle="bold"
-            android:id="@+id/Deaths_num"
-            android:layout_weight="30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1,254,464"
-            android:textSize="20dp"
-            android:layout_marginTop="9dp"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp">
+                    />
+
+                <TextView
+                    android:id="@+id/Deaths_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="30"
+                    android:text="0"
+                    android:textColor="@color/red"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="new: "
+                        android:textColor="@color/grey"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/Deaths_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="0"
+                        android:textColor="@color/red"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:weightSum="60"
+                app:layout_constraintLeft_toRightOf="@id/middl"
+                app:layout_constraintRight_toRightOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global">
+
+                <TextView
+                    android:id="@+id/Recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="Recovered"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/Recovered_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="30"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                app:layout_constraintLeft_toLeftOf="@id/first"
+                app:layout_constraintTop_toBottomOf="@id/first">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Last updated:  "
+                    android:textColor="@color/grey"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/global_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4sp"
+                    android:text=""
+                    android:textColor="@color/grey"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/corner"
+                android:onClick="moreinfo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <ImageView
+                android:id="@+id/go2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/angle2"
+                app:layout_constraintRight_toRightOf="@id/view2"
+                app:layout_constraintTop_toTopOf="@id/view2" />
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:paddingTop="24dp"
+                android:text="more info"
                 android:textColor="@color/grey"
-                android:layout_weight="0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="new: "
-                android:textSize="13dp"
-                />
+                app:layout_constraintRight_toRightOf="@id/go2"
+                app:layout_constraintTop_toTopOf="@id/view2" />
+
+            <ImageView
+                android:id="@+id/egyptflage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/flagg"
+                app:layout_constraintLeft_toLeftOf="@id/view2"
+                app:layout_constraintTop_toTopOf="@id/view2" />
+
             <TextView
-                android:textColor="@color/red"
-                android:id="@+id/Deaths_new"
-                android:layout_weight="0"
+                android:id="@+id/Coronavirus_Global2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="20000"
-                android:textSize="13dp"
+                android:paddingTop="24dp"
+                android:text=" Egypt"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/egyptflage"
+                app:layout_constraintTop_toTopOf="@id/view2"
+
                 />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="24dp"
-        android:id="@+id/end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/middl"
-        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global"
-        app:layout_constraintRight_toRightOf="@id/view"
-        android:orientation="vertical"
-        android:weightSum="60">
 
-        <TextView
-            android:textColor="@color/grey"
-            android:id="@+id/Recovered"
-            android:textAlignment="textStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:text="Recovered"
-            android:textSize="16dp"
+            <LinearLayout
+                android:id="@+id/first2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:weightSum="60"
+                app:layout_constraintLeft_toLeftOf="@id/view2"
+                app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2">
 
-            />
-        <TextView
-            android:textColor="@color/green"
-            android:textStyle="bold"
-            android:id="@+id/Recovered_num"
-            android:layout_weight="30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1,254,464"
-            android:textSize="20dp"
-            android:layout_marginTop="9dp"
-            />
+                <TextView
+                    android:id="@+id/Total_Cases2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="Total Cases"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp"
 
-    </LinearLayout>
+                    />
+
+                <TextView
+                    android:id="@+id/TotalCases_num2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="30"
+                    android:text="0"
+                    android:textColor="@color/baby_blue"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="new: "
+                        android:textColor="@color/grey"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/TotalCases_newNum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="0"
+                        android:textColor="@color/baby_blue"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/middl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:weightSum="60"
+                app:layout_constraintLeft_toRightOf="@id/first"
+                app:layout_constraintRight_toLeftOf="@id/end"
+                app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2">
+
+                <TextView
+                    android:id="@+id/Deaths2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="Deaths"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/Deaths_num2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="30"
+                    android:text="0"
+                    android:textColor="@color/red"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="new: "
+                        android:textColor="@color/grey"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/Deaths_new2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="0"
+                        android:textColor="@color/red"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/end2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:weightSum="60"
+                app:layout_constraintLeft_toRightOf="@id/middl"
+                app:layout_constraintRight_toRightOf="@id/view2"
+                app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2">
+
+                <TextView
+                    android:id="@+id/Recovered2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="Recovered"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/Recovered_num2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="30"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintBottom_toBottomOf="@id/view"
-    app:layout_constraintTop_toBottomOf="@id/first"
-    app:layout_constraintLeft_toLeftOf="@id/first"
-    android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/view2"
+                app:layout_constraintLeft_toLeftOf="@id/first2"
+                app:layout_constraintTop_toBottomOf="@id/first2">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="13sp"
-        android:textColor="@color/grey"
-        android:lineSpacingExtra="4sp"
-        android:text="Last updated:  "
-        />
-    <TextView
-        android:id="@+id/global_update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="13sp"
-        android:textColor="@color/grey"
-        android:lineSpacingExtra="4sp"
-        android:text="Apr 05, 03:54 PM  "
-        />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Last updated:  "
+                    android:textColor="@color/grey"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/egypt_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4sp"
+                    android:text=""
+                    android:textColor="@color/grey"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/corner"
+                android:gravity="center_vertical"
+                android:onClick="seeCounry"
+                android:paddingLeft="16dp"
+                android:text="See all infected countries"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/angle2"
+                app:layout_constraintBottom_toBottomOf="@id/bottom"
+                app:layout_constraintRight_toRightOf="@id/bottom"
+                app:layout_constraintTop_toTopOf="@id/bottom" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
 </LinearLayout>
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:background="@drawable/corner"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        />
-    <ImageView
-        android:id="@+id/egyptflage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/flagg"
-        app:layout_constraintLeft_toLeftOf="@id/view2"
-        app:layout_constraintTop_toTopOf="@id/view2"
-        android:paddingTop="10dp"
-        android:paddingStart="20dp"/>
-    <TextView
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:id="@+id/Coronavirus_Global2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/egyptflage"
-        app:layout_constraintTop_toTopOf="@id/view2"
-        android:text=" Egypt"
-        android:textSize="16dp"
-        android:paddingTop="24dp"
-
-        />
-
-    <LinearLayout
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:id="@+id/first2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="@id/view2"
-        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2"
-        android:orientation="vertical"
-        android:weightSum="60">
-
-        <TextView
-            android:textColor="@color/grey"
-            android:id="@+id/Total_Cases2"
-            android:textAlignment="textStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:text="Total Cases"
-            android:textSize="16dp"
-
-            />
-        <TextView
-            android:textColor="@color/baby_blue"
-            android:textStyle="bold"
-            android:id="@+id/TotalCases_num2"
-            android:layout_weight="30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1,254,464"
-            android:textSize="20dp"
-            android:layout_marginTop="9dp"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp">
-            <TextView
-                android:textColor="@color/grey"
-                android:layout_weight="0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="new: "
-                android:textSize="13dp"
-                />
-            <TextView
-                android:textColor="@color/baby_blue"
-                android:id="@+id/TotalCases_newNum2"
-                android:layout_weight="0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20000"
-                android:textSize="13dp"
-                />
-        </LinearLayout>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="24dp"
-        android:id="@+id/middl2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/first"
-        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2"
-        app:layout_constraintRight_toLeftOf="@id/end"
-        android:orientation="vertical"
-        android:weightSum="60">
-        <TextView
-            android:textColor="@color/grey"
-            android:id="@+id/Deaths2"
-            android:textAlignment="textStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:text="Deaths"
-            android:textSize="16dp"
-
-            />
-        <TextView
-            android:textColor="@color/red"
-            android:textStyle="bold"
-            android:id="@+id/Deaths_num2"
-            android:layout_weight="30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1,254,464"
-            android:textSize="20dp"
-            android:layout_marginTop="9dp"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp">
-            <TextView
-                android:textColor="@color/grey"
-                android:layout_weight="0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="new: "
-                android:textSize="13dp"
-                />
-            <TextView
-                android:textColor="@color/red"
-                android:id="@+id/Deaths_new2"
-                android:layout_weight="0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20000"
-                android:textSize="13dp"
-                />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="24dp"
-        android:id="@+id/end2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/middl"
-        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2"
-        app:layout_constraintRight_toRightOf="@id/view2"
-        android:orientation="vertical"
-        android:weightSum="60">
-
-        <TextView
-            android:textColor="@color/grey"
-            android:id="@+id/Recovered2"
-            android:textAlignment="textStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="30"
-            android:text="Recovered"
-            android:textSize="16dp"
-
-            />
-        <TextView
-            android:textColor="@color/green"
-            android:textStyle="bold"
-            android:id="@+id/Recovered_num2"
-            android:layout_weight="30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1,254,464"
-            android:textSize="20dp"
-            android:layout_marginTop="9dp"
-            />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/view2"
-        app:layout_constraintTop_toBottomOf="@id/first2"
-        app:layout_constraintLeft_toLeftOf="@id/first2"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:textColor="@color/grey"
-            android:lineSpacingExtra="4sp"
-            android:text="Last updated:  "
-            />
-        <TextView
-            android:textSize="13dp"
-            android:id="@+id/egypt_update"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/grey"
-            android:lineSpacingExtra="4sp"
-            android:text="Apr 05, 03:54 PM  "
-            />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/bottom"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/corner"
-        app:layout_constraintTop_toBottomOf="@id/view2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:textColor="@color/grey"
-        android:gravity="center_vertical"
-        android:textAllCaps="false"
-        android:paddingLeft="16dp"
-        android:text="See all infected countries"
-        android:onClick="seeCounry"/>
-
-
-    <ImageView
-        android:layout_width="17dp"
-        android:layout_height="17dp"
-        android:src="@drawable/angle_down"
-        app:layout_constraintRight_toRightOf="@id/bottom"
-        app:layout_constraintTop_toTopOf="@id/bottom"
-        app:layout_constraintBottom_toBottomOf="@id/bottom"
-        android:layout_marginRight="16dp"
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>

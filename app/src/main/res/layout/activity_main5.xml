@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#15202B"
-    tools:context="com.example.corona.Main4Activity">
+    tools:context=".Main5Activity">
     <ImageView
         android:id="@+id/logo"
         android:layout_width="140dp"
@@ -23,7 +22,7 @@
         android:id="@+id/egyptflage"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/flagg"
+        android:src="@drawable/global"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Coronavirus_Global2"
         app:layout_constraintBottom_toBottomOf="@+id/Coronavirus_Global2"
@@ -37,7 +36,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toRightOf="@id/egyptflage"
         app:layout_constraintTop_toBottomOf="@id/logo"
-        android:text="Egypt"
+        android:text="Coronavirus_Global"
         android:textSize="20dp"
         />
 
@@ -50,7 +49,7 @@
         android:layout_marginRight="19dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="refresh"
+        android:onClick="ew"
 
         />
     <ScrollView
@@ -102,7 +101,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/baby_blue"
                         android:textStyle="bold"
-                        android:id="@+id/mTotalCases"
+                        android:id="@+id/eTotalCases"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -142,7 +141,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/baby_blue"
                         android:textStyle="bold"
-                        android:id="@+id/mToday_Cases"
+                        android:id="@+id/eToday_Cases"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -192,7 +191,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/red"
                         android:textStyle="bold"
-                        android:id="@+id/mTotalDeath"
+                        android:id="@+id/eTotalDeath"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -234,7 +233,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/red"
                         android:textStyle="bold"
-                        android:id="@+id/mToday_Death"
+                        android:id="@+id/eToday_Death"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -278,7 +277,7 @@
 
                     <TextView
                         android:textAlignment="center"
-                        android:id="@+id/mTotal_recoverd"
+                        android:id="@+id/eTotal_recoverd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="9dp"
@@ -296,7 +295,7 @@
                     android:background="@drawable/corner"
                     android:layout_weight="50"
                     android:gravity="center_horizontal"
-                    android:id="@+id/first222"
+                    android:id="@+id/first2222"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -317,7 +316,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:id="@+id/mActrive_cases"
+                        android:id="@+id/eActrive_cases"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -335,8 +334,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="100"
-                android:paddingBottom="80dp"
-                >
+                android:paddingBottom="150dp">
 
 
                 <LinearLayout
@@ -362,7 +360,7 @@
 
                     <TextView
                         android:textAlignment="center"
-                        android:id="@+id/mCasesPerOneMillion"
+                        android:id="@+id/eCasesPerOneMillion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="9dp"
@@ -380,7 +378,7 @@
                     android:background="@drawable/corner"
                     android:layout_weight="50"
                     android:gravity="center_horizontal"
-                    android:id="@+id/first2222"
+                    android:id="@+id/first222"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -401,7 +399,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:id="@+id/mDeathsPerOneMillion"
+                        android:id="@+id/eDeathsPerOneMillion"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -412,7 +410,9 @@
                         />
                 </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
-    //-------------------------------
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

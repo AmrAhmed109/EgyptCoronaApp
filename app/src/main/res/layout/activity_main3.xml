@@ -12,7 +12,7 @@
         android:layout_width="140dp"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:src="@drawable/logooo"
+        android:src="@drawable/loglog"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -54,7 +54,7 @@
         android:id="@+id/image1"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/group1"
+        android:src="@drawable/g1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Symptoms" />
@@ -93,7 +93,7 @@
         android:id="@+id/image12"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/group4"
+        android:src="@drawable/g3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/CONTAGION" />
@@ -132,11 +132,11 @@
     <ImageView
         android:id="@+id/image13"
         android:layout_width="match_parent"
-        android:layout_height="97dp"
+        android:layout_height="150dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/group3"
+        android:src="@drawable/g5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Prevention" />

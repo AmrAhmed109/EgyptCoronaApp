@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,24 +21,29 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Main4Activity extends AppCompatActivity {
+    private TextView mtotalcase, mntotalcase,
+            mdeath,mndeath,
+            mrecovery,mactive,mdethpermillion,mcasespermillion;
+
+    private DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
-       /* TextView mtotalcase, mntotalcase,
-                mdeath,mndeath,
-                mrecovery,mactive;
-        TextView  totalcase2_num, totalcase2_num_new,
-                death2_num,death2_num_new,
-                recovery2_num,updateEgypt;
 
+        connectionRetrofit();
+    }
+
+    public void connectionRetrofit(){
         mtotalcase = findViewById(R.id.mTotalCases);
         mntotalcase = findViewById(R.id.mToday_Cases);
         mdeath = findViewById(R.id.mTotalDeath);
         mndeath = findViewById(R.id.mToday_Death);
         mrecovery=findViewById(R.id.mTotal_recoverd);
         mactive=findViewById(R.id.mActrive_cases);
+        mdethpermillion=findViewById(R.id.mDeathsPerOneMillion);
+        mcasespermillion=findViewById(R.id.mCasesPerOneMillion);
 
         ProgressDialog progressDialog = new ProgressDialog(Main4Activity.this);
         progressDialog.setCancelable(false);
@@ -49,18 +56,17 @@ public class Main4Activity extends AppCompatActivity {
             @Override
             public void onResponse(Call<API> call, Response<API> response) {
                 progressDialog.dismiss();
-                String t1 = String.valueOf(response.body().getCases());
-                String t2 = String.valueOf(response.body().getTodayCases());
-                String d1 = String.valueOf(response.body().getDeaths());
-                String d2 = String.valueOf(response.body().getTodayDeaths());
-                String r1 = String.valueOf(response.body().getRecovered());
-                String a1 = String.valueOf(response.body().getActive());
-                mtotalcase.setText(t1);
-                mntotalcase.setText("+"+t2);
-                mdeath.setText(d1);
-                mndeath.setText("+"+d2);
-                mrecovery.setText(r1);
-                mactive.setText(a1);
+                decimalFormat.setGroupingUsed(true);
+                decimalFormat.setGroupingSize(3);
+
+                mtotalcase.setText(decimalFormat.format(response.body().getCases()));
+                mntotalcase.setText("+"+decimalFormat.format(response.body().getTodayCases()));
+                mdeath.setText(decimalFormat.format(response.body().getDeaths()));
+                mndeath.setText("+"+decimalFormat.format(response.body().getTodayDeaths()));
+                mrecovery.setText(decimalFormat.format(response.body().getRecovered()));
+                mactive.setText(decimalFormat.format(response.body().getActive()));
+                mdethpermillion.setText(decimalFormat.format(response.body().getDeathsPerOneMillion()));
+                mcasespermillion.setText(decimalFormat.format(response.body().getCasesPerOneMillion()));
 
             }
 
@@ -70,6 +76,12 @@ public class Main4Activity extends AppCompatActivity {
                 Toast.makeText(Main4Activity.this, "Check your Connection", Toast.LENGTH_SHORT).show();
                 Log.v("haoooooooo",t.getMessage());
             }
-        });*/
+        });
+
+    }
+
+
+    public void refresh(View view) {
+        connectionRetrofit();
     }
 }
