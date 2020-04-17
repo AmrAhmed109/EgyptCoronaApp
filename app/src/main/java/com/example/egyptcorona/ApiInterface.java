@@ -7,13 +7,13 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-    @GET("countries/Egypt")
+    @GET("v2/countries/egypt")
     public Call<API> getapiEgypt();
 
     @GET("api/v1/data/world")
     public Call<List<Api2>> getapiAll();
 
-    @GET("all")
+    @GET("v2/all")
     public Call<Api3> getapiAllGlobal();
 
     @GET("all")

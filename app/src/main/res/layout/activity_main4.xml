@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#15202B"
-    tools:context="com.example.corona.Main4Activity">
+    tools:context=".Main4Activity">
     <ImageView
         android:id="@+id/logo"
         android:layout_width="140dp"
