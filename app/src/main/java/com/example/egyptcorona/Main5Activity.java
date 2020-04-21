@@ -54,7 +54,6 @@ public class Main5Activity extends AppCompatActivity {
 
                 decimalFormat.setGroupingUsed(true);
                 decimalFormat.setGroupingSize(3);
-
                 etotalcase.setText(decimalFormat.format(response.body().getCases()));
                 entotalcase.setText("+" + decimalFormat.format(response.body().getTodayCases()));
                 edeath.setText(decimalFormat.format(response.body().getDeaths()));

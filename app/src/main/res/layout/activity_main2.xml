@@ -8,6 +8,7 @@
     tools:context=".Main2Activity"
     android:orientation="vertical"
     android:background="#15202B">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +17,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
 
 
             <ImageView

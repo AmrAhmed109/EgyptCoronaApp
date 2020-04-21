@@ -3,6 +3,7 @@ package com.example.egyptcorona;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
     }
 
     private void filter (String text){
@@ -65,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 filteredlist.add(api2);
             }
         }
+
 
         usersAdapter.fiterlist(filteredlist);
 
@@ -90,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Api2>> call, Throwable t) {
                 progressDialog.dismiss();
+
                 Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
