@@ -10,7 +10,7 @@ public interface ApiInterface {
     @GET("v2/countries/egypt")
     public Call<API> getapiEgypt();
 
-    @GET("api/v1/data/world")
+    @GET("v2/countries")
     public Call<List<Api2>> getapiAll();
 
     @GET("v2/all")
@@ -19,8 +19,8 @@ public interface ApiInterface {
     @GET("all")
     public Call<Api3> getapiAllGlobal2();
 
-    @GET("all")
-    public Call<List<API>> getapionce();
+    @GET("v2/countries")
+    public Call<List<API>> getapiall2();
 
 }
 

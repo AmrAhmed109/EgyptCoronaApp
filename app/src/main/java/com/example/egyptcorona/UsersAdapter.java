@@ -6,9 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +15,6 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
     Context context;
     List<Api2> userListResponses;
     DecimalFormat decimalFormat = new DecimalFormat("#.##");
-
 
 
     public UsersAdapter(Context context, List<Api2> userListResponses) {
@@ -35,25 +32,21 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
     @Override
     public void onBindViewHolder(UsersViewHolder holder, final int position) {
 
-        if (userListResponses.get(position).getCountry().equals("")){
-            userListResponses.remove(position);
-            userListResponses.add(227,userListResponses.get(0));
-        }
 
         decimalFormat.setGroupingUsed(true);
         decimalFormat.setGroupingSize(3);
         holder.country_name.setText(userListResponses.get(position).getCountry());
-        holder.totalcase.setText(decimalFormat.format(userListResponses.get(position).getTotalCases()));
-        holder.totalcase_new.setText("+"+decimalFormat.format(userListResponses.get(position).getNewCases()));
-        holder.death.setText(decimalFormat.format(userListResponses.get(position).getTotalDeaths()));
-        holder.death_new.setText("+"+decimalFormat.format(userListResponses.get(position).getNewDeaths()));
-        holder.recovery.setText(decimalFormat.format(userListResponses.get(position).getTotalRecovered()));
+        holder.totalcase.setText(decimalFormat.format(userListResponses.get(position).getCases()));
+        holder.totalcase_new.setText("+"+decimalFormat.format(userListResponses.get(position).getTodayCases()));
+        holder.death.setText(decimalFormat.format(userListResponses.get(position).getDeaths()));
+        holder.death_new.setText("+"+decimalFormat.format(userListResponses.get(position).getTodayDeaths()));
+        holder.recovery.setText(decimalFormat.format(userListResponses.get(position).getRecovered()));
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+       holder.itemView.setOnClickListener(new View.OnClickListener() {
+          @Override
+           public void onClick(View v) {
                 Toast.makeText(context,"Active cases in " +userListResponses.get(position).getCountry()+" is "+
-                        decimalFormat.format(userListResponses.get(position).getActiveCases()), Toast.LENGTH_SHORT).show();
+                       decimalFormat.format(userListResponses.get(position).getActive()), Toast.LENGTH_SHORT).show();
             }
 
         });
