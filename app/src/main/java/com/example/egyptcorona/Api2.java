@@ -32,8 +32,8 @@ public class Api2 {
     private int recovered;
     private int active;
     private int critical;
-    private int casesPerOneMillion;
-    private int deathsPerOneMillion;
+    private double casesPerOneMillion;
+    private double deathsPerOneMillion;
     private int tests;
     private int testsPerOneMillion;
     private String continent;
@@ -110,7 +110,7 @@ public class Api2 {
         this.critical = critical;
     }
 
-    public int getCasesPerOneMillion() {
+    public double getCasesPerOneMillion() {
         return casesPerOneMillion;
     }
 
@@ -118,7 +118,7 @@ public class Api2 {
         this.casesPerOneMillion = casesPerOneMillion;
     }
 
-    public int getDeathsPerOneMillion() {
+    public double getDeathsPerOneMillion() {
         return deathsPerOneMillion;
     }
 

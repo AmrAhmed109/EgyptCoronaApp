@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         //Retrofit retrofit = ApiServer.getRetrofitClient();
         // ApiInterface apiInterface = retrofit.create(ApiInterface.class);
         // Call<List<Api2>> listCall = apiInterface.getapiAll();
-        ApiServer2.createService(ApiInterface.class).getapiAll().enqueue(new Callback<List<Api2>>() {
+        ApiServer.createService(ApiInterface.class).getapiAll().enqueue(new Callback<List<Api2>>() {
             @Override
             public void onResponse(Call<List<Api2>> call, Response<List<Api2>> response) {
                 progressDialog.dismiss();
@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Api2>> call, Throwable t) {
                 progressDialog.dismiss();
-
                 Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
