@@ -84,7 +84,7 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onFailure(Call<API> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(Main2Activity.this, "Check your Connection2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Main2Activity.this, "Check your Connection", Toast.LENGTH_SHORT).show();
                 Log.v("haoooooooo",t.getMessage());
             }
         });
