@@ -84,14 +84,14 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onFailure(Call<API> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(Main2Activity.this, "Check your Connection", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Main2Activity.this, "Check your Connection2", Toast.LENGTH_SHORT).show();
                 Log.v("haoooooooo",t.getMessage());
             }
         });
 
 
 
-        ApiServer.createService(ApiInterface.class).getapiAllGlobal().enqueue(new Callback<Api3>() {
+        ApiServer2.createService(ApiInterface.class).getapiAllGlobal().enqueue(new Callback<Api3>() {
             @Override
             public void onResponse(Call<Api3> call, Response<Api3> response) {
                 progressDialog.dismiss();

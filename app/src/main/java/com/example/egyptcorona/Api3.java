@@ -4,19 +4,23 @@ public class Api3 {
 
 
     /**
-     * updated : 1586468401509
-     * cases : 1593515
-     * todayCases : 75555
-     * deaths : 95047
-     * todayDeaths : 6592
-     * recovered : 355262
-     * active : 1143206
-     * critical : 48953
-     * casesPerOneMillion : 204
-     * deathsPerOneMillion : 12
-     * tests : 12555638
-     * testsPerOneMillion : 1607.4
-     * affectedCountries : 211
+     * updated : 1589738639670
+     * cases : 4771697
+     * todayCases : 54688
+     * deaths : 314684
+     * todayDeaths : 1782
+     * recovered : 1843882
+     * active : 2613131
+     * critical : 44776
+     * casesPerOneMillion : 612
+     * deathsPerOneMillion : 40.4
+     * tests : 59644955
+     * testsPerOneMillion : 7697.77
+     * population : 7748344102
+     * activePerOneMillion : 337.25
+     * recoveredPerOneMillion : 237.97
+     * criticalPerOneMillion : 5.78
+     * affectedCountries : 215
      */
 
     private long updated;
@@ -28,9 +32,13 @@ public class Api3 {
     private int active;
     private int critical;
     private int casesPerOneMillion;
-    private int deathsPerOneMillion;
+    private double deathsPerOneMillion;
     private int tests;
     private double testsPerOneMillion;
+    private long population;
+    private double activePerOneMillion;
+    private double recoveredPerOneMillion;
+    private double criticalPerOneMillion;
     private int affectedCountries;
 
     public long getUpdated() {
@@ -105,11 +113,11 @@ public class Api3 {
         this.casesPerOneMillion = casesPerOneMillion;
     }
 
-    public int getDeathsPerOneMillion() {
+    public double getDeathsPerOneMillion() {
         return deathsPerOneMillion;
     }
 
-    public void setDeathsPerOneMillion(int deathsPerOneMillion) {
+    public void setDeathsPerOneMillion(double deathsPerOneMillion) {
         this.deathsPerOneMillion = deathsPerOneMillion;
     }
 
@@ -127,6 +135,38 @@ public class Api3 {
 
     public void setTestsPerOneMillion(double testsPerOneMillion) {
         this.testsPerOneMillion = testsPerOneMillion;
+    }
+
+    public long getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(long population) {
+        this.population = population;
+    }
+
+    public double getActivePerOneMillion() {
+        return activePerOneMillion;
+    }
+
+    public void setActivePerOneMillion(double activePerOneMillion) {
+        this.activePerOneMillion = activePerOneMillion;
+    }
+
+    public double getRecoveredPerOneMillion() {
+        return recoveredPerOneMillion;
+    }
+
+    public void setRecoveredPerOneMillion(double recoveredPerOneMillion) {
+        this.recoveredPerOneMillion = recoveredPerOneMillion;
+    }
+
+    public double getCriticalPerOneMillion() {
+        return criticalPerOneMillion;
+    }
+
+    public void setCriticalPerOneMillion(double criticalPerOneMillion) {
+        this.criticalPerOneMillion = criticalPerOneMillion;
     }
 
     public int getAffectedCountries() {
