@@ -19,8 +19,12 @@ public interface ApiInterface {
     @GET("all")
     public Call<Api3> getapiAllGlobal2();
 
-    @GET("v2/countries")
+    @GET("v2/countries/")
     public Call<List<API>> getapiall2();
+
+    // + country name from the intent
+    // url + country name
+
 
 }
 
