@@ -47,6 +47,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
         holder.death_new.setText("+"+decimalFormat.format(userListResponses.get(position).getTodayDeaths()));
         holder.recovery.setText(decimalFormat.format(userListResponses.get(position).getRecovered()));
         Glide.with(context).asBitmap().load(userListResponses.get(position).getCountryInfo().getFlag()).into(holder.circleImageView);
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +82,6 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
     public void fiterlist (ArrayList<Api2> filteredlist){
         userListResponses = filteredlist;
         notifyDataSetChanged();
-
     }
 
     public class UsersViewHolder extends RecyclerView.ViewHolder {

@@ -55,16 +55,16 @@ public class Main6Activity extends AppCompatActivity {
         TextView fCasesPerOneMillion = findViewById(R.id.fCasesPerOneMillion);
         TextView fDeathsPerOneMillion = findViewById(R.id.fDeathsPerOneMillion);
         CircleImageView circleImageView = findViewById(R.id.egyptflage109);
-        fActrive_cases.setText(active);
-        fCasesPerOneMillion.setText(CasesPerOneMillion);
-        fDeathsPerOneMillion.setText(DeathsPerOneMillion);
-        fCoronavirus_Global3.setText(name);
-        fTotalCases.setText(cases);
-        fToday_Cases.setText(tcases);
-        fTotalDeath.setText(death);
-        fToday_Death.setText(tdeath);
-        fTotal_recoverd.setText(recoverd);
-        Glide.with(this).load(imageurl).into(circleImageView);
+            fActrive_cases.setText(active);
+            fCasesPerOneMillion.setText(CasesPerOneMillion);
+            fDeathsPerOneMillion.setText(DeathsPerOneMillion);
+            fCoronavirus_Global3.setText(name);
+            fTotalCases.setText(cases);
+            fToday_Cases.setText(tcases);
+            fTotalDeath.setText(death);
+            fToday_Death.setText(tdeath);
+            fTotal_recoverd.setText(recoverd);
+            Glide.with(this).load(imageurl).into(circleImageView);
 
     }
 }
