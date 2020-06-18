@@ -4,39 +4,55 @@ import com.google.gson.annotations.SerializedName;
 
 public class Api2 {
 
-
     /**
-     * updated : 1587770293304
+     * updated : 1592485175736
      * country : Afghanistan
-     * countryInfo : {"_id":4,"iso2":"AF","iso3":"AFG","lat":33,"long":65,"flag":"https://corona.lmao.ninja/assets/img/flags/af.png"}
-     * cases : 1351
-     * todayCases : 72
-     * deaths : 43
-     * todayDeaths : 1
-     * recovered : 188
-     * active : 1120
-     * critical : 7
-     * casesPerOneMillion : 35
-     * deathsPerOneMillion : 1
-     * tests : 6422
-     * testsPerOneMillion : 165
+     * countryInfo : {"_id":4,"iso2":"AF","iso3":"AFG","lat":33,"long":65,"flag":"https://disease.sh/assets/img/flags/af.png"}
+     * cases : 27532
+     * todayCases : 658
+     * deaths : 546
+     * todayDeaths : 42
+     * recovered : 7660
+     * todayRecovered : 1502
+     * active : 19326
+     * critical : 19
+     * casesPerOneMillion : 708
+     * deathsPerOneMillion : 14
+     * tests : 61599
+     * testsPerOneMillion : 1584
+     * population : 38889385
      * continent : Asia
+     * oneCasePerPeople : 1413
+     * oneDeathPerPeople : 71226
+     * oneTestPerPeople : 631
+     * activePerOneMillion : 496.95
+     * recoveredPerOneMillion : 196.97
+     * criticalPerOneMillion : 0.49
      */
 
     private long updated;
     private String country;
+    private CountryInfoBean countryInfo;
     private int cases;
     private int todayCases;
     private int deaths;
     private int todayDeaths;
     private int recovered;
+    private int todayRecovered;
     private int active;
     private int critical;
     private double casesPerOneMillion;
     private double deathsPerOneMillion;
     private int tests;
     private int testsPerOneMillion;
+    private int population;
     private String continent;
+    private int oneCasePerPeople;
+    private int oneDeathPerPeople;
+    private int oneTestPerPeople;
+    private double activePerOneMillion;
+    private double recoveredPerOneMillion;
+    private double criticalPerOneMillion;
 
     public long getUpdated() {
         return updated;
@@ -52,6 +68,14 @@ public class Api2 {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public CountryInfoBean getCountryInfo() {
+        return countryInfo;
+    }
+
+    public void setCountryInfo(CountryInfoBean countryInfo) {
+        this.countryInfo = countryInfo;
     }
 
     public int getCases() {
@@ -92,6 +116,14 @@ public class Api2 {
 
     public void setRecovered(int recovered) {
         this.recovered = recovered;
+    }
+
+    public int getTodayRecovered() {
+        return todayRecovered;
+    }
+
+    public void setTodayRecovered(int todayRecovered) {
+        this.todayRecovered = todayRecovered;
     }
 
     public int getActive() {
@@ -142,12 +174,68 @@ public class Api2 {
         this.testsPerOneMillion = testsPerOneMillion;
     }
 
+    public int getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(int population) {
+        this.population = population;
+    }
+
     public String getContinent() {
         return continent;
     }
 
     public void setContinent(String continent) {
         this.continent = continent;
+    }
+
+    public int getOneCasePerPeople() {
+        return oneCasePerPeople;
+    }
+
+    public void setOneCasePerPeople(int oneCasePerPeople) {
+        this.oneCasePerPeople = oneCasePerPeople;
+    }
+
+    public int getOneDeathPerPeople() {
+        return oneDeathPerPeople;
+    }
+
+    public void setOneDeathPerPeople(int oneDeathPerPeople) {
+        this.oneDeathPerPeople = oneDeathPerPeople;
+    }
+
+    public int getOneTestPerPeople() {
+        return oneTestPerPeople;
+    }
+
+    public void setOneTestPerPeople(int oneTestPerPeople) {
+        this.oneTestPerPeople = oneTestPerPeople;
+    }
+
+    public double getActivePerOneMillion() {
+        return activePerOneMillion;
+    }
+
+    public void setActivePerOneMillion(double activePerOneMillion) {
+        this.activePerOneMillion = activePerOneMillion;
+    }
+
+    public double getRecoveredPerOneMillion() {
+        return recoveredPerOneMillion;
+    }
+
+    public void setRecoveredPerOneMillion(double recoveredPerOneMillion) {
+        this.recoveredPerOneMillion = recoveredPerOneMillion;
+    }
+
+    public double getCriticalPerOneMillion() {
+        return criticalPerOneMillion;
+    }
+
+    public void setCriticalPerOneMillion(double criticalPerOneMillion) {
+        this.criticalPerOneMillion = criticalPerOneMillion;
     }
 
     public static class CountryInfoBean {
@@ -157,15 +245,15 @@ public class Api2 {
          * iso3 : AFG
          * lat : 33
          * long : 65
-         * flag : https://corona.lmao.ninja/assets/img/flags/af.png
+         * flag : https://disease.sh/assets/img/flags/af.png
          */
 
         private int _id;
         private String iso2;
         private String iso3;
-        private int lat;
+        private double lat;
         @SerializedName("long")
-        private int longX;
+        private double longX;
         private String flag;
 
         public int get_id() {
@@ -192,7 +280,7 @@ public class Api2 {
             this.iso3 = iso3;
         }
 
-        public int getLat() {
+        public double getLat() {
             return lat;
         }
 
@@ -200,7 +288,7 @@ public class Api2 {
             this.lat = lat;
         }
 
-        public int getLongX() {
+        public double getLongX() {
             return longX;
         }
 

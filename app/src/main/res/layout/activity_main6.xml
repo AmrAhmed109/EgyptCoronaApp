@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#15202B"
-    tools:context=".Main4Activity">
+    tools:context=".Main6Activity">
     <ImageView
         android:id="@+id/logo"
         android:layout_width="140dp"
@@ -18,39 +17,28 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <ImageView
-        android:layout_marginStart="9dp"
-        android:id="@+id/egyptflage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/flagg"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginStart="16dp"
+        android:id="@+id/egyptflage109"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_launcher_background"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Coronavirus_Global2"
-        app:layout_constraintBottom_toBottomOf="@+id/Coronavirus_Global2"
+        app:layout_constraintTop_toTopOf="@+id/Coronavirus_Global3"
+        app:layout_constraintBottom_toBottomOf="@+id/Coronavirus_Global3"
         />
     <TextView
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:id="@+id/Coronavirus_Global2"
+        android:id="@+id/Coronavirus_Global3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/egyptflage"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toRightOf="@id/egyptflage109"
         app:layout_constraintTop_toBottomOf="@id/logo"
-        android:text="Egypt"
+        android:text="Coronavirus Global"
         android:textSize="20dp"
-        />
-    <TextView
-        android:id="@+id/eg_continent"
-        android:layout_marginTop="23dp"
-        android:layout_marginRight="16dp"
-        android:textColor="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
-        android:text="Egypt"
-        android:textSize="16dp"
         />
 
     <ImageView
@@ -62,13 +50,12 @@
         android:layout_marginRight="19dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="refresh"
 
         />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global2"
+        app:layout_constraintTop_toBottomOf="@id/Coronavirus_Global3"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         >
@@ -114,7 +101,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/baby_blue"
                         android:textStyle="bold"
-                        android:id="@+id/mTotalCases"
+                        android:id="@+id/fTotalCases"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -154,7 +141,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/baby_blue"
                         android:textStyle="bold"
-                        android:id="@+id/mToday_Cases"
+                        android:id="@+id/fToday_Cases"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -204,7 +191,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/red"
                         android:textStyle="bold"
-                        android:id="@+id/mTotalDeath"
+                        android:id="@+id/fTotalDeath"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -246,7 +233,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/red"
                         android:textStyle="bold"
-                        android:id="@+id/mToday_Death"
+                        android:id="@+id/fToday_Death"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -290,7 +277,7 @@
 
                     <TextView
                         android:textAlignment="center"
-                        android:id="@+id/mTotal_recoverd"
+                        android:id="@+id/fTotal_recoverd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="9dp"
@@ -308,7 +295,7 @@
                     android:background="@drawable/corner"
                     android:layout_weight="50"
                     android:gravity="center_horizontal"
-                    android:id="@+id/first222"
+                    android:id="@+id/first2222"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -329,7 +316,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:id="@+id/mActrive_cases"
+                        android:id="@+id/fActrive_cases"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -347,8 +334,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="100"
-                android:paddingBottom="80dp"
-                >
+                android:paddingBottom="150dp">
 
 
                 <LinearLayout
@@ -374,7 +360,7 @@
 
                     <TextView
                         android:textAlignment="center"
-                        android:id="@+id/mCasesPerOneMillion"
+                        android:id="@+id/fCasesPerOneMillion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="9dp"
@@ -392,7 +378,7 @@
                     android:background="@drawable/corner"
                     android:layout_weight="50"
                     android:gravity="center_horizontal"
-                    android:id="@+id/first2222"
+                    android:id="@+id/first222"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -413,7 +399,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:id="@+id/mDeathsPerOneMillion"
+                        android:id="@+id/fDeathsPerOneMillion"
                         android:layout_weight="30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -424,7 +410,9 @@
                         />
                 </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
-    //-------------------------------
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

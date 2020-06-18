@@ -8,9 +8,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHolder>  {
     Context context;
@@ -33,7 +38,6 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
     @Override
     public void onBindViewHolder(UsersViewHolder holder, final int position) {
 
-
         decimalFormat.setGroupingUsed(true);
         decimalFormat.setGroupingSize(3);
         holder.country_name.setText(userListResponses.get(position).getCountry());
@@ -42,17 +46,27 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
         holder.death.setText(decimalFormat.format(userListResponses.get(position).getDeaths()));
         holder.death_new.setText("+"+decimalFormat.format(userListResponses.get(position).getTodayDeaths()));
         holder.recovery.setText(decimalFormat.format(userListResponses.get(position).getRecovered()));
-
-
+        Glide.with(context).asBitmap().load(userListResponses.get(position).getCountryInfo().getFlag()).into(holder.circleImageView);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //        Intent intent = new Intent(this,Main4Activity.class);
 //        intent.putExtra("name",userListResponses.get(position).getCountry());
 //        startActivity(intent);
-
-                Toast.makeText(context,"Active cases in " +userListResponses.get(position).getCountry()+" is "+
-                        decimalFormat.format(userListResponses.get(position).getActive()), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context,Main6Activity.class);
+                intent.putExtra("name",userListResponses.get(position).getCountry());
+                intent.putExtra("totalcase",decimalFormat.format(userListResponses.get(position).getCases()));
+                intent.putExtra("totalcase_new","+"+decimalFormat.format(userListResponses.get(position).getTodayCases()));
+                intent.putExtra("death",decimalFormat.format(userListResponses.get(position).getDeaths()));
+                intent.putExtra("death_new","+"+decimalFormat.format(userListResponses.get(position).getTodayDeaths()));
+                intent.putExtra("recovery",decimalFormat.format(userListResponses.get(position).getRecovered()));
+                intent.putExtra("active",decimalFormat.format(userListResponses.get(position).getActive()));
+                intent.putExtra("CasesPerOneMillion",decimalFormat.format(userListResponses.get(position).getCasesPerOneMillion()));
+                intent.putExtra("DeathsPerOneMillion",decimalFormat.format(userListResponses.get(position).getDeathsPerOneMillion()));
+                intent.putExtra("image",userListResponses.get(position).getCountryInfo().getFlag());
+                context.startActivity(intent);
+               // Toast.makeText(context,"Active cases in " +userListResponses.get(position).getCountry()+" is "+
+               //    decimalFormat.format(userListResponses.get(position).getActive()), Toast.LENGTH_SHORT).show();
             }
 
         });
@@ -74,8 +88,10 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
         TextView  country_name ,totalcase, totalcase_new,
                 death,death_new,
                 recovery;
+        CircleImageView circleImageView ;
         public UsersViewHolder(View itemView) {
             super(itemView);
+            circleImageView = itemView.findViewById(R.id.image109);
             country_name = itemView.findViewById(R.id.country_name);
             totalcase = itemView.findViewById(R.id.Total_Caseslist);
             totalcase_new = itemView.findViewById(R.id.New_Caseslist);

@@ -23,7 +23,7 @@ import retrofit2.Response;
 public class Main4Activity extends AppCompatActivity {
     private TextView mtotalcase, mntotalcase,
             mdeath,mndeath,
-            mrecovery,mactive,mdethpermillion,mcasespermillion;
+            mrecovery,mactive,mdethpermillion,mcasespermillion , eg_continent;
 
     private DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
@@ -44,7 +44,7 @@ public class Main4Activity extends AppCompatActivity {
         mactive=findViewById(R.id.mActrive_cases);
         mdethpermillion=findViewById(R.id.mDeathsPerOneMillion);
         mcasespermillion=findViewById(R.id.mCasesPerOneMillion);
-
+        eg_continent = findViewById(R.id.eg_continent);
         ProgressDialog progressDialog = new ProgressDialog(Main4Activity.this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Getting update..");
@@ -58,7 +58,7 @@ public class Main4Activity extends AppCompatActivity {
                 progressDialog.dismiss();
                 decimalFormat.setGroupingUsed(true);
                 decimalFormat.setGroupingSize(3);
-
+                eg_continent.setText(response.body().getContinent());
                 mtotalcase.setText(decimalFormat.format(response.body().getCases()));
                 mntotalcase.setText("+"+decimalFormat.format(response.body().getTodayCases()));
                 mdeath.setText(decimalFormat.format(response.body().getDeaths()));

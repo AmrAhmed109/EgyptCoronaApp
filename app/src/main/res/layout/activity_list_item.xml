@@ -14,6 +14,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp">
 
+
         <View
             android:id="@+id/view4"
             android:layout_width="wrap_content"
@@ -27,19 +28,28 @@
             android:layout_marginRight="16dp"
 
             />
-
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image109"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintLeft_toLeftOf="@id/view4"
+            app:layout_constraintTop_toTopOf="@id/view4"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="24dp"
+            />
         <TextView
             android:textColor="@color/white"
             android:textStyle="bold"
             android:id="@+id/country_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@id/view4"
+            app:layout_constraintLeft_toRightOf="@id/image109"
             app:layout_constraintTop_toTopOf="@id/view4"
             android:text="Coronavirus Global"
             android:textSize="16dp"
-            android:layout_marginStart="24dp"
             android:paddingTop="8dp"
+            android:layout_marginStart="8dp"
 
             />
 
