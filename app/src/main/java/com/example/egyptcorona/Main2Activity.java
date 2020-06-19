@@ -1,12 +1,28 @@
 package com.example.egyptcorona;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +38,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
+
 public class Main2Activity extends AppCompatActivity {
     private TextView  totalcase_num, totalcase_num_new,
             death_num,death_num_new,
@@ -29,15 +46,41 @@ public class Main2Activity extends AppCompatActivity {
     private TextView  totalcase2_num, totalcase2_num_new,
             death2_num,death2_num_new,
             recovery2_num,updateEgypt;
+    private int myPREFERENCES = 0 ;
+    SharedPreferences sharedpreferences;
 
     private DecimalFormat decimalFormat = new DecimalFormat("#.##");
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
+        sharedpreferences = getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
         connection();
+        ImageView button = findViewById(R.id.image223);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendNotification("Last update about Egypt Cases for now","Today Cases in Egypt is "+String.valueOf(myPREFERENCES)+" cases");
+
+            }
+        });
+
+        SharedPreferences.Editor myedit = sharedpreferences.edit();
+
+        sharedpreferences.getInt("data",0);
+
+
+        if (sharedpreferences.getInt("data",0) < myPREFERENCES){
+            sendNotification("title",String.valueOf(myPREFERENCES));
+            myedit.putInt("data",myPREFERENCES);
+            myedit.commit();
+        }
+
+    }
+
+
+    public void shared(){
+
     }
 
     public void connection(){
@@ -65,15 +108,16 @@ public class Main2Activity extends AppCompatActivity {
         ApiServer.createService(ApiInterface.class).getapiEgypt().enqueue(new Callback<API>() {
             @Override
             public void onResponse(Call<API> call, Response<API> response) {
+
                 decimalFormat.setGroupingUsed(true);
                 decimalFormat.setGroupingSize(3);
-
                 totalcase2_num.setText(decimalFormat.format(response.body().getCases()));
                 totalcase2_num_new.setText("+"+ decimalFormat.format(response.body().getTodayCases()));
                 death2_num.setText( decimalFormat.format(response.body().getDeaths()));
                 death2_num_new.setText("+"+decimalFormat.format(response.body().getTodayDeaths()));
                 recovery2_num.setText( decimalFormat.format(response.body().getRecovered()));
 
+                myPREFERENCES =response.body().getCases();
                 Date date2 = new Date(response.body().getUpdated());
                 DateFormat formatter2 = new SimpleDateFormat("dd MMMM hh:mm aa");
                 formatter2.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -140,8 +184,46 @@ public class Main2Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     public void more_global_info(View view) {
         Intent intent = new Intent(this,Main5Activity.class);
         startActivity(intent);
+    }
+
+    private void sendNotification(String messageTitle,String messageBody) {
+        NotificationManager notificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+        Uri soundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            @SuppressLint("WrongConstant")
+            NotificationChannel notificationChannel=new NotificationChannel("my_notification","n_channel",NotificationManager.IMPORTANCE_MAX);
+            notificationChannel.setDescription("description");
+            notificationChannel.setName("Channel Name");
+            assert notificationManager != null;
+            notificationManager.createNotificationChannel(notificationChannel);
+        }
+
+
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.corona_circle)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.egypt_circle))
+                .setContentTitle(messageTitle)
+                .setContentText(messageBody)
+                .setAutoCancel(true)
+                .setSound(soundUri)
+                .setContentIntent(pendingIntent)
+                .setDefaults(Notification.DEFAULT_ALL)
+                .setOnlyAlertOnce(true)
+                .setChannelId("my_notification")
+                .setColor(Color.parseColor("#3F5996"));
+
+        //.setProgress(100,50,false);
+        assert notificationManager != null;
+        int m = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
+        notificationManager.notify(m, notificationBuilder.build());
     }
 }
